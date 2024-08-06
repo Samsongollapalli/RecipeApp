@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Food Recipe </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            margin-top: 0px;
+        }
+        .backgroundimage{
+            background-image: url("https://img.freepik.com/free-vector/doodle-food-pattern_1409-3920.jpg?t=st=1718262034~exp=1718265634~hmac=144c8b9a5bc42b390a63dea1583b02481af5b484e78d271e9274066b1d830cc0&w=1060");
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .Welcomepage{
+            text-align: center;
+            padding: 5px;
+            margin: 0px;
+
+        }
+        .Welcometag{
+            color: rgb(48, 93, 48);
+            font-weight: bold;
+        }
+        .Recipeapp{
+            color: rgb(255, 63, 63);
+        }
+        .foodimagesid{
+          margin-left: 10px;;
+        }
+        .loginpage{
+            background-color: black;
+            opacity: 0.8;
+            height: 500px;
+            width: 500px;
+            margin-left: 375px;
+            text-align: center;
+        }
+        .loginpagemove{
+            padding-top: 2rem;
+        }
+        .login{
+            color: white;
+            font-size: 3rem;
+        }
+        .username{
+            height: 3rem;
+            width: 25rem;
+            margin: 10px;
+            opacity: 1;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .password{
+            height: 3rem;
+            width: 25rem;
+            margin: 10px;   
+            opacity: 1;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .submitbutton{
+            height: 3rem;
+            width: 10rem;
+            margin:10px;
+            opacity: 1;
+            font-size: 1.20rem;
+            border: 0px;
+        }
+        .submitbutton:hover{
+            background-color: rgb(254, 45, 45);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="backgroundimage">
+         <div class="Welcomepage">
+            <h1 class="Welcometag"> Welcome to <span class="Recipeapp"> RECIPE APP </span>  </h1>
+              </div>
+           <div class="sectiondiv"></div>
+           <div class="loginpage">
+            <div class="loginpagemove">
+                    <h1 class="login"> login </h1>
+                <form>
+                <div class="md-3">
+                    <label for="username"></label>
+                    <input id="username" type="username" placeholder="Username" class="username">
+                </div>
+                <div class="md-3">
+                    <label for="password"></label>
+                    <input id="password"type="password" placeholder="password" class=password>
+                </div>
+                <div>
+                    <button class="submitbutton" onclick="login()"> Submit </button>
+                </div>
+                </form> 
+               </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        function login(){
+            var user=document.getElementById("username").value;
+            var pass= document.getElementById("password").value;
+
+            // username = "admin"
+            // password   = "123456"
+
+        if(user && pass){
+            window.location.assign('./RecipeData.html')
+            alert("login sucessfully");
+            return false;
+        }
+        else{
+            alert("please enter the username and password");
+            return false;
+        }
+        }
+
+    </script>
+</body>
+</html>
